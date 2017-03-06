@@ -1,57 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Mobile-specific meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Mobile-specific meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Score Tracker</title>
 
-  <title>Score Tracker</title>
+    <!-- CSS -->
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="static/css/custom.css" rel="stylesheet" />
 
-  <!-- CSS -->
-  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link href="static/css/font-awesome.min.css" rel="stylesheet" media="screen">
-  <link href="static/css/custom.css" rel="stylesheet" />
-
-  <!-- JS -->
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="static/bootstrap/js/bootstrap.min.js"></script>
-  <script src="static/js/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <!-- JS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <link rel="icon" href="static/favicon/overwatch.ico">
 </head>
 
 <body>
-  <form class="overwatch_form" data-toggle="validator" method="POST" action="/submit" role="form" >
-  <div class="form-group">
-    <label for="exampleTextarea">Battle Tag ID</label>
-    <input class="form-control" required name="BattleTagID" id="BattleTagID">
-    <div class="help-block with-errors"></div>
-  </div>
-  <div class="form-group">
-    <label for="exampleTextarea">Overwatch Username</label>
-    <input class="form-control" required name="Username" id="Username">
-    <div class="help-block with-errors"></div>
-  </div>
-  <div class="form-group">
-    <label for="exampleTextarea">Level (1-1800)</label>
-    <input class="form-control" required type="number" min="0" max="1800" name="Level" id="Level">
-    <div class="help-block with-errors"></div>
-  </div>
-  <input type ="hidden" placeholder="0" name="Time" id="Time">
+    <div class="background">
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Overwatch Score Tracker</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/displayAll">View All Scores</a></li>
+                    <li class="active"><a href="/">Submit New Score</a></li>
+                </ul>
+            </div>
+        </nav>
 
-  <button type="submit" class="btn btn-default">Submit</button>
+        <div class="form_wrapper">
+            <form class="overwatch_form" data-toggle="validator" method="POST" action="/submit" role="form">
+                <div class="form-group">
+                    <label for="exampleTextarea">Battle Tag ID</label>
+                    <input class="form-control" required name="BattleTagID" id="BattleTagID">
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea">Overwatch Username</label>
+                    <input class="form-control" required name="Username" id="Username">
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleTextarea">Level (1-1800)</label>
+                    <input class="form-control" required type="number" min="0" max="1800" name="Level" id="Level">
+                    <div class="help-block with-errors"></div>
+                </div>
+                <input type="hidden" placeholder="0" name="Time" id="Time">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
 
-</form>
-<script>
-
-$(document).ready(function(){
-    $('.overwatch_form').bind('submit',function(){
-      var x = moment().format('MMMM Do YYYY, h:mm:ss a');
-      $("#Time").val(x);
-      console.log(x);
-    });
-});
-
-
-</script>
+        <div>
+            <script>
+                $(document).ready(function() {
+                    $('.overwatch_form').bind('submit', function() {
+                        var x = moment().format('MMMM Do YYYY, h:mm:ss a');
+                        $("#Time").val(x);
+                        console.log(x);
+                    });
+                });
+            </script>
 </body>

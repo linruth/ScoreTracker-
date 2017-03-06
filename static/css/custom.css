@@ -1,388 +1,84 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400');
 
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.form_wrapper {
+    background: rgba(17, 17, 17, 0.4);
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.overwatch_form {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 18px;
+}
+
+.form-group label {
+    color: white;
+}
+
+.help-block .with-errors {
+    color: white;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background: rgba(17, 17, 17, 0.4);
+}
+
 .header {
-  position: relative;
-  width: 100%;
-  z-index: 10 !important;
+    position: relative;
+    width: 100%;
+    z-index: 10 !important;
 }
 
-.navbar-custom,
-.navbar-custom .dropdown-menu {
-  background: #fff;
-  padding: 0;
+.navbar-custom, .navbar-custom .dropdown-menu {
+    background: rgba(17, 17, 17, 0.4);
+    padding: 0;
 }
 
-#home {
-  background: url("../images/sky_will.jpg");
-  background-color: #222;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-  padding: 0;
-  height: 100vh;
+.container {
+    margin-top: 50px;
 }
 
-.parallax-window {
-  min-height: 150px;
-  background: transparent;
+.borderless td{
+    border: none !important;
 }
 
-#skills {
-  margin-bottom: 20px;
-}
-
-.skills_transition {
-  margin-bottom: 20px;
-}
-
-.contact_transition {
-  margin-top: 25px;
-}
-
-.contact_blurb {
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 50px;
-  margin-top: 70px;
-}
-
-.start {
-  background-color: rgba(16, 15, 15, 0.55);
-  z-index: 1;
-  position: absolute;
-  top: 20%;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-family: 'Lato', sans-serif;
-}
-
-.blue_font {
-  color: #07889B;
-}
-
-.subheading {
-  font-size: 35px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 150px;
-  font-family: 'Lato', sans-serif;
-}
-
-section {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-}
-
-.ruth {
-  background: url("../images/ruth.jpg");
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  border-radius: 5px;
-  margin-top: 40px;
-  margin-bottom: 30px;
-}
-
-.ruth_blurb{
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 50px;
-
-}
-
-#ruth_header {
-  font-size: 100px;
-  letter-spacing: 5px;
-  word-spacing: 10px;
-}
-
-#ruth_subheading {
-  font-size: 25px;
-
-}
-
-.icon-bar {
-  background-color: #07889B;
-}
-
-.list_social {
-  font-size: 35px;
-  word-spacing: 25px;
-  color: white;
-  list-style: none outside;
-  padding-left: 0;
-}
-
-.list_social li {
-  width: 40px;
-  list-style: none;
-  margin: 0 auto;
-  text-align: center;
-  display: inline-block;
-}
-
-.list_social li i {
-  color: white;
-  transition: all 0.2s ease-out;
-}
-
-.list_social li i:hover {
-  color: #07889B;
-  -webkit-transform: rotate(360deg);
-  transition-duration: 0.8s;
-}
-
-@media screen and (max-width : 320px){
-  #projects .container {
-    padding-left: 0 !important;
-  }
-  .list_social {
-    font-size: 25px;
-    word-spacing: 8px;
-  }
-  .start {
-    top: 5%;
-  }
-  .icon-scroll {
-    bottom: 20px !important;
-  }
-}
-
-.email {
-  margin-bottom: 60px;
-}
-.email a{
-  color: #07889B;
-}
-
-.bg_overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(17, 17, 17, 0.4);
-  z-index: -1;
+.table {
+    background: rgba(17, 17, 17, 0.6);
+    color: white;
 }
 
 .navbar {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .navbar-custom .navbar-brand {
-  font-weight: 300;
-  font-size: 22px;
-  font-family: 'Lato', sans-serif;
-  color: #07889B;
+    font-weight: 300;
+    font-size: 22px;
+    font-family: 'Lato', sans-serif;
+    color: white;
 }
 
 .navbar-collapse a {
-  color: #07889B;
+    color: white;
 }
 
-/* Scroll Down animation from codemyui */
-
-.icon-scroll,
-.icon-scroll:before {
-  position: absolute;
-  left: 50%;
-}
-.icon-scroll {
-  width: 40px;
-  height: 70px;
-  margin-left: -20px;
-  margin-top: -35px;
-  box-shadow: inset 0 0 0 1px #fff;
-  border-radius: 25px;
-  display: block;
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
+.navbar-nav a {
+    color: white;
 }
 
-.icon-scroll a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.icon-scroll:before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background: #fff;
-  margin-left: -4px;
-  top: 8px;
-  border-radius: 4px;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: scroll;
-          animation-name: scroll;
-}
-@-webkit-keyframes scroll {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(46px);
-            transform: translateY(46px);
-  }
-}
-@keyframes scroll {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(46px);
-            transform: translateY(46px);
-  }
+.background {
+    background: url("../images/winston.jpg");
+    background-size: cover;
+    height: 100vh;
 }
 
-/* Tympanus Hover Effect */
-
-.grid {
-  position: relative;
-  margin: 0 auto;
-  padding: 1em 0 4em;
-  max-width: 1000px;
-  list-style: none;
-  text-align: center;
-}
-
-/* Common style */
-.grid figure {
-  position: relative;
-  float: left;
-  overflow: hidden;
-  margin: 10px 1%;
-  min-width: 320px;
-  max-width: 480px;
-  max-height: 360px;
-  width: 48%;
-  background: #07889B;
-  text-align: center;
-  cursor: pointer;
-}
-
-.grid figure img {
-  position: relative;
-  display: block;
-  min-height: 100%;
-  max-width: 100%;
-  opacity: 0.8;
-}
-
-.grid figure figcaption {
-  padding: 2em;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.25em;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.grid figure figcaption::before,
-.grid figure figcaption::after {
-  pointer-events: none;
-}
-
-.grid figure figcaption,
-.grid figure figcaption > a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Anchor will cover the whole item by default */
-.grid figure figcaption > a {
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
-  opacity: 0;
-}
-
-.grid figure h2 {
-  word-spacing: -0.15em;
-  font-weight: 300;
-}
-
-.grid figure h2 span {
-  font-weight: 800;
-}
-
-.grid figure h2,
-.grid figure p {
-  margin: 0;
-}
-
-.grid figure p {
-  letter-spacing: 1px;
-  font-size: 68.5%;
-}
-
-/*---------------*/
-/***** Chico *****/
-/*---------------*/
-
-figure.effect-chico img {
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: scale(1.12);
-  transform: scale(1.12);
-}
-
-figure.effect-chico:hover img {
-  opacity: 0.5;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-figure.effect-chico figcaption {
-  padding: 3em;
-}
-
-figure.effect-chico figcaption::before {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
-  border: 1px solid #fff;
-  content: '';
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-figure.effect-chico figcaption::before,
-figure.effect-chico p {
-  opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-}
-
-figure.effect-chico h2 {
-  padding: 20% 0 20px 0;
-  background: rgba(16, 15, 15, 0.35);
-}
-
-figure.effect-chico p {
-  margin: 0 auto;
-  max-width: 200px;
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
-
-figure.effect-chico:hover figcaption::before,
-figure.effect-chico:hover p {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+.background_table {
+    background: url("../images/tracer.jpg");
+    background-size: cover;
+    height: 100vh;
 }

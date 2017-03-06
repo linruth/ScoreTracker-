@@ -1,0 +1,65 @@
+<head>
+    <!-- Mobile-specific meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Score Tracker</title>
+    <!-- CSS -->
+    <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="static/css/custom.css" rel="stylesheet" />
+
+    <!-- JS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <link rel="icon" href="static/favicon/overwatch.ico">
+    <script>
+        console.log("Results being retrieved...");
+        var JSONResults = '{{ JSONResults }}';
+        console.log(JSONResults);
+    </script>
+</head>
+
+<body>
+    <div class="background_table">
+        <nav class="navbar navbar-custom">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Overwatch Score Tracker</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="/displayAll">View All Scores</a></li>
+                    <li><a href="/">Submit New Score</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table  borderless">
+                    <thead>
+                        <tr>
+                            <th>BattleTagID</th>
+                            <th>Overwatch username</th>
+                            <th>Level</th>
+                            <th>Date logged</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in JSONResults %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                            <td>{{ row[2] }}</td>
+                            <td>{{ row[3] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
