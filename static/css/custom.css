@@ -21,11 +21,11 @@ body {
 }
 
 .with-errors {
-    color: white;
+    color: white !important;
 }
 
 .list-unstyled {
-    color: white;
+    color: white !important;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
