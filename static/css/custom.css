@@ -24,6 +24,10 @@ body {
     color: white;
 }
 
+.list-unstyled {
+    color: white;
+}
+
 .nav>li>a:focus, .nav>li>a:hover {
     background: rgba(17, 17, 17, 0.4);
 }
